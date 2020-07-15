@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itamaraty</title>
+</head>
+<body>
+    <h1>Verificar País</h1>
+    Digite seu país de origem <input type="text" name="pais" id="pais">
+    <input type="button" value="Consultar" onclick="consultar()">
+    <div id="res">
+    </div>
+
+    <script>
+        function consultar() {
+            var textp = document.querySelector('input#pais')
+            var res = document.querySelector('div#res')
+            var pais = String(textp.value)
+            res.innerHTML = `<p>Seu país de origem é o <strong>${pais}</strong></p>`
+            if (pais == 'Brasil') {
+                res.innerHTML += `<p>Bem-Vindo ao <strong>${pais}</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
